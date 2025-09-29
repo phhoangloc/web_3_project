@@ -1,0 +1,24 @@
+POST http://localhost:4000/api/user/createWallet
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiaWF0IjoxNzU4NjgxNDMxLCJleHAiOjE3NTg3Njc4MzF9.qpeL71239Y1ayk5ekgG4Qoo2urkzfvszGoS-z2Ws3qA
+Content-Type: application/json
+
+{
+    "password":"031090Ph@2"
+}
+###
+post http://localhost:4000/api/login
+Content-Type: application/json
+
+{
+    "username":"hoangloc",
+    "password":"031090Ph@"
+}
+####
+POST http://localhost:4000/api/user/account
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiaWF0IjoxNzU4NjgxNDMxLCJleHAiOjE3NTg3Njc4MzF9.qpeL71239Y1ayk5ekgG4Qoo2urkzfvszGoS-z2Ws3qA 
+Content-Type: application/json
+
+{
+    "password":"031090Ph@2",
+    "rpc_url":"https://sepolia.infura.io/v3/7ae10b016de24dc2883aa614f54b852b"
+}

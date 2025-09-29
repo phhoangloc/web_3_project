@@ -1,0 +1,37 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          Int         @id @default(autoincrement())
+  archive     String      @default("user")
+  username    String      @unique
+  password    String 
+  email       String      @unique
+  active      Boolean     @default(false)
+  position    Role        @default(user)
+  createdAt   DateTime    @default(now())
+  mnemonicId  Int?         @unique
+  mnemonic    Mnemonic?    @relation(fields: [mnemonicId], references: [id])
+}
+enum Role {
+  user
+  admin
+}
+model Mnemonic{
+  id          Int         @id @default(autoincrement())
+  password    String 
+  mnemonic    String      @db.Text
+  user        User?       
+} 

@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+    --color-one: #E0FBFC;
+    --color-two: #13262F;
+    --color-three: #A4303F;
+
+    --breakpoint-xs: 375px;
+    --xs: 375px;
+    --breakpoint-sm: 575px;
+    --sm: 575px;
+    --breakpoint-md: 768px;
+    --md: 768px;
+    --breakpoint-lg: 992px;
+    --lg: 992px;
+    --breakpoint-xl: 1200px;
+    --xl: 1200px;
+    --breakpoint-xxl: 1600px;
+    --xxl: 1600px;
+}
+
+.font-sans {
+    font-family: Noto Serif, Noto Serif Fallback;
+}
+
+.loading_ani {
+    animation: loading_ani 2s infinite;
+}
+
+@keyframes loading_ani {
+    0% {
+        width: 0%;
+        left: 0;
+        opacity: 0;
+    }
+
+    25% {
+        width: 100%;
+        left: 0;
+        opacity: 0.75;
+    }
+
+    50% {
+        width: 0%;
+        left: 100%;
+        opacity: 0;
+    }
+
+    75% {
+        width: 100%;
+        left: 0%;
+        opacity: 0;
+    }
+
+    100% {
+        width: 0%;
+        left: 0%;
+        opacity: 0;
+    }
+}
+
+body {
+    font-family: Itim, Itim Fallback !important;
+    background-image: url("../../public/background.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: color;
+    background-color: rgba(0, 0, 0, 0.8);
+}

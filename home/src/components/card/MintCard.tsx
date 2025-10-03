@@ -47,8 +47,7 @@ const MintCard = ({ closeModal }: Props) => {
     }, [ContractAbi, _currentAccount.privateKey])
     const mint = async (add: string, ipfs: string) => {
         if (!_contract) { return }
-        const result = await _contract.safeMint(add, ipfs)
-        console.log(result)
+        await _contract.safeMint(add, ipfs)
         closeModal()
     }
     return (

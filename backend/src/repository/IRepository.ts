@@ -1,4 +1,3 @@
-import { $Enums } from "@prisma/client";
 import { UserRepository } from "./UserRepository";
 import { MnemonicRepository } from "./MnemonicRepository";
 export class IUserRepository extends UserRepository { }

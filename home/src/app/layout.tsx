@@ -4,7 +4,7 @@ import "../style/globals.css";
 import Provider from "@/redux/component/provider";
 import { Header } from "@/components/layout/header";
 export const metadata: Metadata = {
-  title: "Locand",
+  title: "Walleto",
 };
 
 const fontItim = Itim({

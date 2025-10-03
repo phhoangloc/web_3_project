@@ -17,6 +17,8 @@
     --xl: 1200px;
     --breakpoint-xxl: 1600px;
     --xxl: 1600px;
+
+    --full-48: calc(100% - 12rem)
 }
 
 .font-sans {
